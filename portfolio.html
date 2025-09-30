@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Gbagalo Kennedy</title>
+  <meta name="description" content="Explore the portfolio of Gbagalo Kennedy — featuring print design, branding, creative problem-solving, and photography.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1 class="logo"><a href="index.html">Gbagalo Kennedy</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section>
+      <h2>Portfolio</h2>
+      <p>Browse through my creative work — from print projects to photography assignments.</p>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('print', this)">Print</button>
+        <button class="tab-btn" onclick="showTab('photography', this)">Photography</button>
+      </div>
+
+      <!-- PRINT -->
+      <div id="print" class="tab-content active">
+        <div class="work-grid">
+          <article class="project-card">
+            <img src="images/DYE_SUB_FINAL%20(1)%20-%20Copy_Page_2.png" alt="Dye Sublimation Project">
+            <h3>Dye Sublimation Project</h3>
+            <p>A print design experiment using dye sublimation techniques to explore color blending and growth.</p>
+            <a href="images/DYE_SUB_FINAL%20(1)%20-%20Copy_Page_2.png" target="_blank" class="cta-btn">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <img src="images/ScreenPrint%20(2).png" alt="Screen Print Project">
+            <h3>Screen Print Project</h3>
+            <p>A screen printing project showcasing branding layouts and print production practice.</p>
+            <a href="images/ScreenPrint%20(2).png" target="_blank" class="cta-btn">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <img src="images/flyer.png" alt="Energy Drink Flyer">
+            <h3>Energy Drink Flyer</h3>
+            <p>A bold and high-impact advertisement for Surge Energy Drink.</p>
+            <a href="images/flyer.png" target="_blank" class="cta-btn">View Design</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- PHOTOGRAPHY -->
+      <div id="photography" class="tab-content">
+        <div class="work-grid">
+          <article class="project-card">
+            <img src="images/Freezing%20Motion%20.JPG" alt="Moments in Motion">
+            <h3>Moments in Motion</h3>
+            <p>Capturing fast-moving subjects with sharp clarity using high shutter speeds, freezing energy and detail in a single frame.</p>
+          </article>
+
+          <article class="project-card">
+            <img src="images/Kennedy_Self_image-1.png" alt="Reflections Self Portrait">
+            <h3>Reflections</h3>
+            <p>A self-portrait project designed to capture personality and perspective through composition, lighting, and expression.</p>
+          </article>
+
+          <article class="project-card">
+            <img src="images/Enviromental_study.png" alt="Justice in Focus">
+            <h3>Justice in Focus</h3>
+            <p>An environmental study of a criminal justice student, using setting and composition to reflect both identity and career path.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Gbagalo Kennedy | Designed and coded from scratch in Bowling Green, Ohio</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function showTab(tabId, element) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+
+      // Deactivate all tab buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+      // Show selected tab + activate button
+      document.getElementById(tabId).classList.add('active');
+      element.classList.add('active');
+    }
+  </script>
+</body>
+</html>
