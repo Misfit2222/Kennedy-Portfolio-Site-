@@ -4,185 +4,106 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Gbagalo Kennedy</title>
-
   <meta name="description" content="Explore the portfolio of Gbagalo Kennedy — featuring print design, branding, creative problem-solving, and photography.">
-
   <link rel="stylesheet" href="styles/styles.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header>
+    <h1 class="logo"><a href="index.html">Gbagalo Kennedy</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1 class="logo"><a href="index.html">Gbagalo Kennedy</a></h1>
+  <!-- MAIN -->
+  <main>
+    <section>
+      <h2>Portfolio</h2>
+      <p>Browse through my creative work — from print projects to photography assignments.</p>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html" class="active">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('print', this)">Print</button>
+        <button class="tab-btn" onclick="showTab('photography', this)">Photography</button>
+      </div>
 
-<main>
-<section>
+      <!-- PRINT -->
+      <div id="print" class="tab-content active">
+        <div class="work-grid">
+          <article class="project-card">
+            <img src="images/DYE_SUB_FINAL%20(1)%20-%20Copy_Page_2.png" alt="Dye Sublimation Project">
+            <h3>Dye Sublimation Project</h3>
+            <p>A print design experiment using dye sublimation techniques to explore color blending and growth.</p>
+            <a href="images/DYE_SUB_FINAL%20(1)%20-%20Copy_Page_2.png" target="_blank" class="cta-btn">View Project</a>
+          </article>
 
-<h2>Portfolio</h2>
-<p>Browse through my creative work — from print projects to photography assignments.</p>
+          <article class="project-card">
+            <img src="images/ScreenPrint%20(2).png" alt="Screen Print Project">
+            <h3>Screen Print Project</h3>
+            <p>A screen printing project showcasing branding layouts and print production practice.</p>
+            <a href="images/ScreenPrint%20(2).png" target="_blank" class="cta-btn">View Project</a>
+          </article>
 
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('print', this)">Print</button>
-  <button class="tab-btn" onclick="showTab('photography', this)">Photography</button>
-</div>
+          <article class="project-card">
+            <img src="images/flyer.png" alt="Energy Drink Flyer">
+            <h3>Energy Drink Flyer</h3>
+            <p>A bold and high-impact advertisement for Surge Energy Drink.</p>
+            <a href="images/flyer.png" target="_blank" class="cta-btn">View Design</a>
+          </article>
+        </div>
+      </div>
 
-<!-- PRINT -->
-<div id="print" class="tab-content active">
+      <!-- PHOTOGRAPHY -->
+      <div id="photography" class="tab-content">
+        <div class="work-grid">
+          <article class="project-card">
+            <img src="images/Freezing%20Motion%20.JPG" alt="Moments in Motion">
+            <h3>Moments in Motion</h3>
+            <p>Capturing fast-moving subjects with sharp clarity using high shutter speeds, freezing energy and detail in a single frame.</p>
+          </article>
 
-<p class="section-intro">
-This section showcases my print design and production work, including marketing materials,
-branding layouts, and client-ready documents. Each project demonstrates my ability to combine
-visual design with real-world communication goals for businesses and organizations.
-</p>
+          <article class="project-card">
+            <img src="images/Kennedy_Self_image-1.png" alt="Reflections Self Portrait">
+            <h3>Reflections</h3>
+            <p>A self-portrait project designed to capture personality and perspective through composition, lighting, and expression.</p>
+          </article>
 
-<div class="work-grid">
+          <article class="project-card">
+            <img src="images/Enviromental_study.png" alt="Justice in Focus">
+            <h3>Justice in Focus</h3>
+            <p>An environmental study of a criminal justice student, using setting and composition to reflect both identity and career path.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<article class="project-card">
-  <img src="images/DYE_SUB_FINAL(1)-Copy_Page_2.png" alt="Dye Sublimation Color Study">
-  <h3>Dye Sublimation Color Study</h3>
-  <p>
-  A print experiment exploring color blending, heat transfer, and material interaction.
-  This project demonstrates technical understanding of dye sublimation printing and color behavior.
-  </p>
-</article>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Gbagalo Kennedy | Designed and coded from scratch in Bowling Green, Ohio</p>
+  </footer>
 
-<article class="project-card">
-  <img src="images/ScreenPrint-(1).png" alt="Screen Print Branding Layout">
-  <h3>Screen Print Branding Layout</h3>
-  <p>
-  A branding-focused screen print project demonstrating layout planning, ink layering,
-  and production workflow used in commercial print environments.
-  </p>
-</article>
+  <!-- SCRIPT -->
+  <script>
+    function showTab(tabId, element) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
 
-<article class="project-card">
-  <img src="images/flyer.png" alt="Beverage Marketing Flyer">
-  <h3>Beverage Marketing Flyer</h3>
-  <p>
-  A bold promotional flyer designed to advertise an energy drink using strong typography,
-  color contrast, and visual hierarchy for high-impact marketing.
-  </p>
-</article>
+      // Deactivate all tab buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
 
-<article class="project-card">
-  <div class="pdf-card">
-    <h3>ADA Business Open House Flyer</h3>
-    <img src="images/Business_Flyer_Kennedy.png" alt="Beverage Marketing Flyer">
-    <p>
-    A promotional flyer created to advertise a business open house event. This project focuses on
-    clear information hierarchy, branding consistency, and marketing communication for small businesses.
-    </p>
-  </div>
-    
-</article>
-
-<article class="project-card">
-  <div class="pdf-card">
-    <h3>Customer Service RV Documentation</h3>
-    <img src="images/RV_Vector.png" alt="Beverage Marketing Flyer">
-    <p>
-    An annotated client document created to review and improve customer communication materials.
-    Demonstrates attention to detail, layout clarity, and professional document markup.
-    </p>
-  </div>
-</article>
-
-</div>
-</div>
-
-<!-- PHOTOGRAPHY -->
-<div id="photography" class="tab-content">
-
-<p class="section-intro">
-This section highlights my photography work, focusing on composition, lighting, and storytelling.
-These projects explore motion, portraiture, and environmental studies to capture emotion,
-identity, and real-world moments.
-</p>
-
-<div class="work-grid">
-
-<article class="project-card">
-  <img src="images/Freezing Motion.png" alt="Moments in Motion">
-  <h3>Moments in Motion</h3>
-  <p>
-  A motion photography study capturing fast-moving subjects using high shutter speeds.
-  Explores timing, focus precision, and freezing dynamic action.
-  </p>
-</article>
-
-<article class="project-card">
-  <img src="images/Kennedy_Self_image-1.png" alt="Reflections Self Portrait">
-  <h3>Reflections</h3>
-  <p>
-  A conceptual self-portrait exploring identity through lighting, reflection, and composition.
-  Focused on visual storytelling and personal narrative.
-  </p>
-</article>
-
-<article class="project-card">
-  <img src="images/Enviromental_study.png" alt="Environmental Portrait Study">
-  <h3>Environmental Portrait Study</h3>
-  <p>
-  An environmental portrait showing the relationship between subject and career path using
-  location, lighting, and composition.
-  </p>
-</article>
-
-<article class="project-card">
-  <img src="images/best_photo1.jpg" alt="Architectural Light Study">
-  <h3>Architectural Light Study</h3>
-  <p>
-  A minimal composition focusing on line, contrast, and lighting structure.
-  Demonstrates visual balance and geometric framing.
-  </p>
-</article>
-
-<article class="project-card">
-  <img src="images/best_photo_2.jpg" alt="Color Texture Study">
-  <h3>Color Texture Study</h3>
-  <p>
-  A close-up composition exploring texture, color relationships, and pattern structure
-  within architectural materials.
-  </p>
-</article>
-
-</div>
-</div>
-
-</section>
-</main>
-
-<footer>
-<p>&copy; 2025 Gbagalo Kennedy | Designed and coded from scratch in Bowling Green, Ohio</p>
-</footer>
-
-<script>
-function showTab(tabId, element) {
-  document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
-  element.classList.add('active');
-}
-</script>
-
+      // Show selected tab + activate button
+      document.getElementById(tabId).classList.add('active');
+      element.classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
