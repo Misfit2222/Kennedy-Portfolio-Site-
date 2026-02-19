@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
   font-family: "Open Sans", sans-serif;
   background: #f9f9f9;
@@ -5,7 +6,11 @@ body {
   margin: 0;
 }
 
-/* Header */
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
 header {
   background: #fff;
   padding: 1rem 2rem;
@@ -15,6 +20,7 @@ header {
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 header .logo a {
@@ -24,7 +30,7 @@ header .logo a {
   text-decoration: none;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav ul {
   list-style: none;
   display: flex;
@@ -42,7 +48,7 @@ nav a:hover {
   color: #0077cc;
 }
 
-/* Sections */
+/* UNIVERSAL SECTIONS */
 section {
   padding: 4rem 2rem;
   max-width: 1100px;
@@ -55,106 +61,230 @@ section {
   color: #555;
 }
 
-/* Tabs */
-.tabs {
+/* -------------------------------------------------- */
+/* LANDING PAGE (SCOPED) */
+/* -------------------------------------------------- */
+
+.landing {
+  background: #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.landing-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+.landing-text {
+  flex: 1.4;
+}
+
+.name {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: #0077cc;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.intro-paragraph {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* BUTTON GROUPS */
+.btn-group,
+.about-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* UNIVERSAL BUTTON STYLE */
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border: 2px solid #0077cc;
+  color: #0077cc;
+  background: transparent;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 160px;
+  transition: all 0.25s ease;
+}
+
+.cta-btn:hover {
+  background: #0077cc;
+  color: #ffffff;
+}
+
+/* -------------------------------------------------- */
+/* PORTFOLIO PAGE (SCOPED) */
+/* -------------------------------------------------- */
+
+.portfolio-page .tabs {
   display: flex;
   gap: 1rem;
   margin: 2rem 0;
 }
 
-.tab-btn {
+.portfolio-page .tab-btn {
   padding: 0.6rem 1.2rem;
   border: 1px solid #0077cc;
   background: white;
   color: #0077cc;
   border-radius: 6px;
   cursor: pointer;
-}
-
-.tab-btn.active,
-.tab-btn:hover {
-  background: #0077cc;
-  color: white;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-/* Grid — CENTERING FIX */
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 280px);
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-/* Cards */
-.project-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.project-card h3 {
-  font-family: "Playfair Display", serif;
-}
-
-/* PDF Cards */
-.pdf-card {
-  padding: 1rem;
-}
-
-/* Buttons */
-.cta-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.4rem;
-  border: 1px solid #0077cc;
-  color: #0077cc;
-  text-decoration: none;
-  border-radius: 6px;
   font-weight: 600;
 }
 
-.cta-btn:hover {
+.portfolio-page .tab-btn.active,
+.portfolio-page .tab-btn:hover {
   background: #0077cc;
   color: white;
 }
 
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
+.portfolio-page .tab-content {
+  display: none;
 }
 
-/* Responsive */
+.portfolio-page .tab-content.active {
+  display: block;
+}
+
+/* GRID — ALWAYS 3 PER ROW ON DESKTOP */
+.portfolio-page .work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .portfolio-page .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-page .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CLEAN, NATURAL PROJECT LOOK */
+.portfolio-page .project-card {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+  transition: transform 0.25s ease;
+}
+
+/* FULL-VIEW IMAGES — NO CROPPING */
+.portfolio-page .project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* full image visible */
+  border-radius: 6px;
+  margin-bottom: 0.6rem;
+}
+
+.portfolio-page .project-card:hover {
+  transform: translateY(-3px);
+}
+
+.portfolio-page .project-card h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0.3rem 0 0.3rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.portfolio-page .project-card p {
+  color: #555;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 90%;
+}
+
+/* -------------------------------------------------- */
+/* FOOTER — RESTORED ORIGINAL STYLE */
+/* -------------------------------------------------- */
+
+footer {
+  background: #333;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .landing-container {
+    gap: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .tabs {
+  .landing-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .landing-image img {
+    max-width: 220px;
+  }
+
+  .btn-group,
+  .about-links {
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-page .tabs {
     flex-direction: column;
     align-items: center;
   }
 }
-
-
