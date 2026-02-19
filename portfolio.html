@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="portfolio-page">
   <!-- HEADER -->
   <header>
     <h1 class="logo"><a href="index.html">Gbagalo Kennedy</a></h1>
@@ -34,52 +34,93 @@
         <button class="tab-btn" onclick="showTab('photography', this)">Photography</button>
       </div>
 
-      <!-- PRINT -->
+      <!-- PRINT SECTION -->
       <div id="print" class="tab-content active">
         <div class="work-grid">
+
+          <!-- Existing Projects -->
           <article class="project-card">
-            <img src="images/DYE_SUB_FINAL%20(1)%20-%20Copy_Page_2.png" alt="Dye Sublimation Project">
+            <img src="images/dye_sub2.png" alt="Dye Sublimation Project">
             <h3>Dye Sublimation Project</h3>
             <p>A print design experiment using dye sublimation techniques to explore color blending and growth.</p>
-            <a href="images/DYE_SUB_FINAL%20(1)%20-%20Copy_Page_2.png" target="_blank" class="cta-btn">View Project</a>
           </article>
 
           <article class="project-card">
-            <img src="images/ScreenPrint%20(2).png" alt="Screen Print Project">
+            <img src="images/ScreenPrint (2).png" alt="Screen Print Project">
             <h3>Screen Print Project</h3>
             <p>A screen printing project showcasing branding layouts and print production practice.</p>
-            <a href="images/ScreenPrint%20(2).png" target="_blank" class="cta-btn">View Project</a>
           </article>
 
           <article class="project-card">
             <img src="images/flyer.png" alt="Energy Drink Flyer">
             <h3>Energy Drink Flyer</h3>
             <p>A bold and high-impact advertisement for Surge Energy Drink.</p>
-            <a href="images/flyer.png" target="_blank" class="cta-btn">View Design</a>
           </article>
+
+          <!-- NEW VECTOR PROJECTS -->
+          <article class="project-card">
+            <img src="images/Business_Flyer_Kennedy.png" alt="Open House Flyer">
+            <h3>Open House Flyer</h3>
+            <p>A promotional flyer designed for a professional image consulting open house, blending modern layout and brand-focused visuals.</p>
+          </article>
+
+          <article class="project-card">
+            <img src="images/RV_Vector.png" alt="Amos Motor & RV Logo">
+            <h3>Amos Motor & RV Logo</h3>
+            <p>A bold vector logo combining an RV illustration with a scenic backdrop to represent a motor and RV service brand.</p>
+          </article>
+
+          <article class="project-card">
+            <img src="images/shoes logo.png" alt="Shoes for Tots Logo">
+            <h3>Shoes for Tots Logo</h3>
+            <p>A playful and colorful logo created for a children’s charity initiative focused on providing shoes to young kids.</p>
+          </article>
+
         </div>
       </div>
 
-      <!-- PHOTOGRAPHY -->
+      <!-- PHOTOGRAPHY SECTION -->
       <div id="photography" class="tab-content">
         <div class="work-grid">
+
+          <!-- Existing Photography -->
           <article class="project-card">
-            <img src="images/Freezing%20Motion%20.JPG" alt="Moments in Motion">
+            <img src="images/freezing_motion.JPG" alt="Moments in Motion">
             <h3>Moments in Motion</h3>
             <p>Capturing fast-moving subjects with sharp clarity using high shutter speeds, freezing energy and detail in a single frame.</p>
           </article>
 
           <article class="project-card">
-            <img src="images/Kennedy_Self_image-1.png" alt="Reflections Self Portrait">
+            <img src="images/self_image.JPG" alt="Reflections Self Portrait">
             <h3>Reflections</h3>
             <p>A self-portrait project designed to capture personality and perspective through composition, lighting, and expression.</p>
           </article>
 
           <article class="project-card">
-            <img src="images/Enviromental_study.png" alt="Justice in Focus">
+            <img src="images/industry_study.JPG" alt="Justice in Focus">
             <h3>Justice in Focus</h3>
             <p>An environmental study of a criminal justice student, using setting and composition to reflect both identity and career path.</p>
           </article>
+
+          <!-- NEW PHOTOGRAPHY PROJECTS -->
+          <article class="project-card">
+            <img src="images/best_photo_2.jpg" alt="Geometric Brick Mosaic">
+            <h3>Geometric Brick Mosaic</h3>
+            <p>A study in symmetry and texture, capturing the intricate radial brickwork pattern found in architectural design.</p>
+          </article>
+
+          <article class="project-card">
+            <img src="images/best_photo1.jpg" alt="Suspended Light">
+            <h3>Suspended Light</h3>
+            <p>A minimalist black‑and‑white composition highlighting the contrast between a lone bulb and a cloudy sky.</p>
+          </article>
+
+          <article class="project-card">
+            <img src="images/campus_photo.JPG" alt="University Hall">
+            <h3>University Hall</h3>
+            <p>A documentary-style campus photograph capturing the historic architecture and atmosphere of University Hall.</p>
+          </article>
+
         </div>
       </div>
     </section>
@@ -93,17 +134,11 @@
   <!-- SCRIPT -->
   <script>
     function showTab(tabId, element) {
-      // Hide all tab contents
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-
-      // Deactivate all tab buttons
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-
-      // Show selected tab + activate button
       document.getElementById(tabId).classList.add('active');
       element.classList.add('active');
     }
   </script>
 </body>
 </html>
-
